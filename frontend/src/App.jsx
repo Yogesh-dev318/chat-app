@@ -12,9 +12,10 @@ import {Loader2} from "lucide-react"
 import {Toaster} from "react-hot-toast"
 import { useThemeStore } from './store/useThemeStore'
 function App() {
-  const {authUser,checkAuth,isCheckingAuth,onlineUsers}=useAuthStore()
+  const {authUser,checkAuth,isCheckingAuth,onlineUsers,socket}=useAuthStore()
   const { theme } = useThemeStore();
 
+  console.log(socket)
   console.log({onlineUsers})
 
   useEffect(()=>{
